@@ -1,9 +1,7 @@
 #include <stdint.h>
 
-uint8_t timer_reg;
 extern void select_and_load_file(uint8_t* mem);
 extern void make_charset();
-extern void print_dir();
 
 int main ()
 {

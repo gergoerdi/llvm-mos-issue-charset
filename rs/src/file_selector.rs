@@ -94,13 +94,6 @@ fn select_file(dirents: &[Dirent], n: u8) -> u8 {
                     if sel - offset > WINDOW_HEIGHT { offset += 1 }
                     break;
                 }
-                // Q     W      E      R
-                0x3e | 0x09 | 0x0e | 0x11 if sel > 0 => {
-                    wait_release = true;
-                    sel -= 1;
-                    if sel < offset { offset -= 1 }
-                    break;
-                }
 
                 // Enter
                 0x01 => { return sel }
